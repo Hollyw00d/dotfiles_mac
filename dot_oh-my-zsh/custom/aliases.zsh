@@ -1,6 +1,11 @@
 ###### Location of this File ######
 # File located at: `Users/mattj/.oh-my-zsh/custom/aliases.zsh`
 
+###### Setup Files ######
+alias npmglobalwrite='SCRIPT_PATH="$HOME/setup-scripts/write-npm-packages.sh"; chmod +x "$SCRIPT_PATH" && bash "$SCRIPT_PATH"'
+alias npmglobalinstall='SCRIPT_PATH="$HOME/setup-scripts/install-npm-packages.sh"; chmod +x "$SCRIPT_PATH" && bash "$SCRIPT_PATH"'
+alias chezmoiadd='SCRIPT_PATH="$HOME/setup-scripts/chezmoi-add-items.sh"; chmod +x "$SCRIPT_PATH" && bash "$SCRIPT_PATH"'
+
 ###### Profile Files ######
 # zprofile
 alias profile="cd; vim ~/.zshrc"
