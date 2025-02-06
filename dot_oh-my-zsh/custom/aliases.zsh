@@ -109,6 +109,11 @@ alias ghrepo="gh repo view --web --branch $currentgitbranch"
 ## Example:
 ## cpycmd brew doctor
 function cpyout() {
+  ## Trim leading/trailing spaces and check if input is empty or "cpy"
+  if [[ -z "${*// /}" ]]; then
+    return 0  # Exit silently with no output
+  fi
+
   ## IF `clipboard-cli` npm package is installed globally,
   ## copy command output with this `clipboard` to clipboard
   ## (from `clipboard-cli` npm package) and output command to terminal,
